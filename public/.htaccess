@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+Options -Multiviews
+
+# permite la reescritura de las rutas
+RewriteEngine On
+RewriteBase /phppoo/public
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+# si el archivo no existe se carga en index.php
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+</IfModule>
