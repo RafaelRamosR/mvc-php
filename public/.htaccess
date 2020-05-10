@@ -3,7 +3,7 @@ Options -Multiviews
 
 # permite la reescritura de las rutas
 RewriteEngine On
-RewriteBase /phppoo/public
+RewriteBase /php-mvc/public
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 # si el archivo no existe se carga en index.php

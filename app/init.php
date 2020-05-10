@@ -1,4 +1,4 @@
 <?php
 require_once 'libs/DB.php';
-require_once 'libs/controller.php';
-require_once 'libs/core.php';
+require_once 'libs/Controller.php';
+require_once 'libs/Core.php';
