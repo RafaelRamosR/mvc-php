@@ -15,6 +15,10 @@ class Core {
 	{	
 		// VALIDAAAAAR
 		$url = $this->getUrl();
+
+
+
+		/* GENERA ERRORES
 		// verificar que controlador exista
 		// si existe, será el controlador por defecto
 		if(file_exists('../app/controllers/'. ucwords($url[0]) .'.php')) {
@@ -22,6 +26,10 @@ class Core {
 			// elimina el controlador por defecto anterior
 			unset($url[0]);
 		}
+		*/
+
+
+
 		// traer el nuevo controlador
 		require_once '../app/controllers/'.$this->controladorActual.'.php';
 		$this->controladorActual = new $this->controladorActual;

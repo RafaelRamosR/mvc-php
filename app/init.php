@@ -1,4 +1,8 @@
 <?php
-require_once 'libs/DB.php';
-require_once 'libs/Controller.php';
-require_once 'libs/Core.php';
+// Cargar librerías
+require_once 'config/config.php';
+
+// Autoload para cargar las clases
+spl_autoload_register(function($className){
+    require_once 'libs/'. $className .'.php';
+});
