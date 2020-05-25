@@ -12,19 +12,13 @@ class Core {
 	protected $parametros = [];
 
 	public function __construct()
-	{
+	{	
+		// VALIDAAAAAR
 		$url = $this->getUrl();
-		if(file_exists('../app/controladores/'. ucwords($url[0]).'.php')) {
-            //Si existe se setea como controlador por defecto
-            $this->controladorActual = ucwords($url[0]);            
-            //unset indice
-            unset($url[0]);
-        }
 		// verificar que controlador exista
 		// si existe, será el controlador por defecto
-		if(file_exists('../app/controllers/'.ucwords($url[0]).'.php')) {
+		if(file_exists('../app/controllers/'. ucwords($url[0]) .'.php')) {
 			$this->controladorActual = ucwords($url[0]);
-
 			// elimina el controlador por defecto anterior
 			unset($url[0]);
 		}

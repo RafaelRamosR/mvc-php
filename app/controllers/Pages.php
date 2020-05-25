@@ -1,19 +1,21 @@
 <?php
 
-    class Pages {
+    class Pages extends Controller {
         public function __construct()
         {
             //echo 'Controlador páginas cargando';
         }
 
+        // método por defecto
         public function index()
         {
-            # método por defecto
+            $this->view('pages/home');
         }
 
         public function articles() 
         {
-
+            # php-mvc/pages/articles
+            $this->view('pages/articles');
         }
 
         public function update($num) 
