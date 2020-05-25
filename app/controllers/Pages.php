@@ -9,7 +9,11 @@
         // método por defecto
         public function index()
         {
-            $this->view('pages/home');
+            // Pasar parámetros
+            $data = [
+                'titulo' => 'Bienvenido a la prueba de MVC'
+            ];
+            $this->view('pages/home', $data);
         }
 
         public function articles() 
